@@ -1,25 +1,32 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # Lightbox-with-Hotwire
+
+## README
+
+This particular example lays out some of the key aspects and techniques when working with the new Rails frontend stack. We will use Turbo to lazy load images into the lightbox’s modal, and Stimulus to
+
+To run this application locally, clone the repository and then:
+
+```bash
+bundle install
+```
+```bash
+rails db:create db:migrate
+```
+or
+```bash
+bin/setup
+```
+
+### Start application
+
+```bash
+bin/dev
+```
+
+## Preview
+
+https://user-images.githubusercontent.com/17977331/156861598-6af56e09-96fe-4d45-a7ad-f02053c24239.mp4
+
+
+
+PS Based on https://blog.minthesize.com/lightbox-hotwire-swiper
