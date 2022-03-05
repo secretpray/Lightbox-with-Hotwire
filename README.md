@@ -10,7 +10,7 @@ To run this application locally, clone the repository and then:
 bundle install
 ```
 ```bash
-rails db:create db:migrate
+rails db:create db:migrate db:seed
 ```
 or
 ```bash
