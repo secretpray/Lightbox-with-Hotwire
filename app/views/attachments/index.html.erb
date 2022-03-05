@@ -1,5 +1,20 @@
 <%= turbo_frame_tag :attachment_gallery do %>
-  <% @article.images.each do |image| %>
-    <%= image_tag image, class: "object-contain rounded-xl px-6 h-full mx-auto max-h-screen" %>
-  <% end %>
+  <div data-controller="swiper"
+       data-action="lightbox:open@document->swiper#navigate">
+    <div class="swiper" data-swiper-target="container">
+      <div class="swiper-wrapper">
+        <% @article.images.each do |image| %>
+          <div class="swiper-slide flex justify-center"
+               data-key="<%= image.key %>">
+            <%= image_tag image, class: "object-contain rounded-xl h-96 mx-auto" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="swiper-button-prev" data-swiper-target="prev">
+      </div>
+      <div class="swiper-button-next" data-swiper-target="next">
+      </div>
+    </div>
+  </div>
 <% end %>

@@ -10,7 +10,9 @@
           <%= image_tag image.variant(:thumb),
                         class: "object-cover h-full w-full group-hover:opacity-75",
                         data: { action: "click->lightbox#handleOpen",
-                                lightbox_url_param: article_attachments_path(article) } %>
+                                lightbox_url_param: article_attachments_path(article),
+                                lightbox_key_param: image.key
+                               } %>
         </div>
       </li>
     <% end %>
