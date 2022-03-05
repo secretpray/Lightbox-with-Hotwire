@@ -11,6 +11,9 @@ export default class extends Controller {
         nextEl: this.nextTarget,
         prevEl: this.prevTarget,
       },
+      on: {
+        slideChange: this.handleSlideChange.bind(this),
+      },
     })
   }
 
@@ -28,5 +31,11 @@ export default class extends Controller {
     )
 
     this.swiper?.slideTo(activeSlide, 0)
+  }
+
+  handleSlideChange(swiper) {
+    this.dispatch("slide-change", {
+      detail: { slideName: swiper.slides[swiper.activeIndex].dataset.filename },
+    })
   }
 }

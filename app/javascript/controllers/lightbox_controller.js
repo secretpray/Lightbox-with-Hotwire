@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["modal", "background", "frame"]
+  static targets = ["modal", "background", "frame", "slideName"]
 
   async handleOpen(event) {
     event.preventDefault()
@@ -22,5 +22,9 @@ export default class extends Controller {
     this.modalTarget.classList.add("hidden")
     this.backgroundTarget.classList.remove("opacity-100")
     this.backgroundTarget.classList.add("opacity-0")
+  }
+
+  setSlideName({ detail }) {
+    this.slideNameTarget.textContent = detail.slideName;
   }
 }

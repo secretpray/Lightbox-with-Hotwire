@@ -1,5 +1,6 @@
 <div class="hidden fixed z-30 inset-0 overflow-y-auto"
-     data-lightbox-target="modal">
+      data-lightbox-target="modal"
+      data-action="swiper:slide-change->lightbox#setSlideName">
   <div class="flex items-center justify-center h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
     <%# Background %>
     <div class="opacity-0 fixed inset-0 transition-opacity"
@@ -7,7 +8,8 @@
       <div class="absolute inset-0 bg-gray-700 bg-opacity-75">
         <%# top left slide labels %>
         <div class="sm:block absolute top-0 left-0 pt-4 pl-4">
-          <span class="text-white font-medium"><!-- will hold the slide name --></span>
+          <span class="text-white font-medium"
+                data-lightbox-target="slideName"></span>
         </div>
 
         <%# X-close icon in top-right corner %>

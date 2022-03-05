@@ -5,7 +5,8 @@
       <div class="swiper-wrapper">
         <% @article.images.each do |image| %>
           <div class="swiper-slide flex justify-center"
-               data-key="<%= image.key %>">
+               data-key="<%= image.key %>"
+               data-filename="<%= image.blob.filename %>">
             <%= image_tag image, class: "object-contain rounded-xl h-96 mx-auto" %>
           </div>
         <% end %>
